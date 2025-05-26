@@ -11,6 +11,10 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.asymmetric import rsa
 
+import dilithium_py
+
+import dilithium_py.dilithium
+import dilithium_py.ml_dsa
 from typing_extensions import deprecated
 
 from jwcrypto.common import JWException
@@ -90,7 +94,9 @@ _OKP_CURVES_TABLE = {
 JWKTypesRegistry = {'EC': 'Elliptic Curve',
                     'RSA': 'RSA',
                     'oct': 'Octet sequence',
-                    'OKP': 'Octet Key Pair'}
+                    'OKP': 'Octet Key Pair',
+                    'AKP': 'AKP',
+                    }
 """Registry of valid Key Types"""
 
 
@@ -134,6 +140,12 @@ JWKValuesRegistry = {
         'crv': JWKParameter('Curve', True, True, ParmType.name),
         'x': JWKParameter('Public Key', True, True, ParmType.b64),
         'd': JWKParameter('Private Key', False, False, ParmType.b64),
+    },
+    'AKP': {
+        'alg':JWKParameter('Algorithm', True, True, ParmType.name),
+        'pub': JWKParameter('Public Key', True, True, ParmType.b64),
+        'priv': JWKParameter('Private Key', False, False, ParmType.b64),
+        'seed': JWKParameter('Seed', False, False, ParmType.b64),
     }
 }
 """Registry of valid key values"""
@@ -513,6 +525,54 @@ class JWK(dict):
         )
         self.import_key(**params)
 
+    def _generate_AKP(self, params):
+        alg = 'ML-DSA-44'
+        if 'alg' in params:
+            alg = params.pop('alg')
+        # 'curve' is for backwards compat, if 'crv' is defined it takes
+        # precedence
+        # if 'crv' in params:
+        #     curve = params.pop('crv')
+        # curve_fn = self._get_curve_by_name(curve, 'EC')
+        # key = ec.generate_private_key(curve_fn, default_backend())
+        # self._import_pyca_pri_ec(key, **params)
+        seed = os.urandom(32)
+        if alg == 'ML-DSA-44':
+            pk, sk = dilithium_py.ml_dsa.ML_DSA_44.key_derive(seed)
+        elif alg == 'ML-DSA-65':
+            pk, sk = dilithium_py.ml_dsa.ML_DSA_65.key_derive(seed)
+        elif alg == 'ML-DSA-87':
+            pk, sk = dilithium_py.ml_dsa.ML_DSA_87.key_derive(seed)
+        elif alg == 'Dilithium2':
+            pk, sk = dilithium_py.dilithium.Dilithium2.key_derive(seed)
+        elif alg == 'Dilithium3':
+            pk, sk = dilithium_py.dilithium.Dilithium3.key_derive(seed)
+        elif alg == 'Dilithium5':
+            pk, sk = dilithium_py.dilithium.Dilithium5.key_derive(seed)
+        params.update(
+            alg=alg,
+        )
+        self._import_pyca_pri_akp((pk, seed), **params)
+
+    def _import_pyca_pri_akp(self, key, **params):
+        # pn = key.private_numbers()
+        # key_size = pn.public_numbers.curve.key_size
+        params.update(
+            kty="AKP",
+            pub=base64url_encode(key[0]),
+            seed=base64url_encode(key[1]),
+        )
+        self.import_key(**params)
+
+    def _import_pyca_pub_akp(self, key, **params):
+        pn = key.public_numbers()
+        key_size = pn.curve.key_size
+        params.update(
+            kty='AKP',
+            pub=base64url_encode(key[0]),
+        )
+        self.import_key(**params)
+
     def _generate_OKP(self, params):
         if 'crv' not in params:
             raise InvalidJWKValue('Must specify "crv" for OKP key generation')
@@ -869,6 +929,52 @@ class JWK(dict):
             self._cache_pri_k = k
         return k
 
+    def _akp_pub_n(self):
+        return base64url_decode(self.get('pub'))
+
+    def _akp_pri_n(self):
+        if self.get('priv') is not None:
+            return base64url_decode(self.get('priv'))
+        else:
+            seed = base64url_decode(self.get('seed'))
+            alg = self.get('alg')
+            if alg == 'ML-DSA-44':
+                pk, sk = dilithium_py.ml_dsa.ML_DSA_44.key_derive(seed)
+                return sk
+            elif alg == 'ML-DSA-65':
+                pk, sk = dilithium_py.ml_dsa.ML_DSA_65.key_derive(seed)
+                return sk
+            elif alg == 'ML-DSA-87':
+                pk, sk = dilithium_py.ml_dsa.ML_DSA_87.key_derive(seed)
+                return sk
+            elif alg == 'Dilithium2':
+                pk, sk = dilithium_py.dilithium.Dilithium2.key_derive(seed)
+                return sk
+            elif alg == 'Dilithium3':
+                pk, sk = dilithium_py.dilithium.Dilithium3.key_derive(seed)
+                return sk
+            elif alg == 'Dilithium5':    
+                pk, sk = dilithium_py.dilithium.Dilithium5.key_derive(seed)
+                return sk
+            else:
+                raise InvalidJWKValue('Unknown algorithm "%s"' % alg)
+        # d = self._decode_int(self.get('d'))
+        # return ec.EllipticCurvePrivateNumbers(d, self._ec_pub_n(curve))
+
+    def _akp_pub(self):
+        k = self._cache_pub_k
+        if k is None:
+            k = self._akp_pub_n()
+            self._cache_pub_k = k
+        return k
+
+    def _akp_pri(self):
+        k = self._cache_pri_k
+        if k is None:
+            k = self._akp_pri_n()
+            self._cache_pri_k = k
+        return k
+
     def _okp_pub(self):
         k = self._cache_pub_k
         if k is None:
@@ -907,6 +1013,8 @@ class JWK(dict):
             return self._ec_pub(arg)
         elif ktype == 'OKP':
             return self._okp_pub()
+        elif ktype == 'AKP':
+            return self._akp_pub()
         else:
             raise NotImplementedError
 
@@ -920,6 +1028,8 @@ class JWK(dict):
             return self._ec_pri(arg)
         elif ktype == 'OKP':
             return self._okp_pri()
+        elif ktype == 'AKP':
+            return self._akp_pri()
         else:
             raise NotImplementedError
 

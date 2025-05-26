@@ -40,9 +40,45 @@ PublicKeys = {"keys": [
                     "nqDKgw",
                "e": "AQAB",
                "alg": "RS256",
-               "kid": "2011-04-29"}],
+               "kid": "2011-04-29"},
+              {
+               "kid": "T4xl70S7MT6Zeq6r9V9fPJGVn76wfnXJ21-gyo0Gu6o",
+               "kty": "AKP",
+               "alg": "ML-DSA-44",
+               "pub": "unH59k4RuutY-pxvu24U5h8YZD2rSVtHU5qRZsoBmBMcRPgmu9VuNOVd"
+                      "teXi1zNIXjnqJg_GAAxepLqA00Vc3lO0bzRIKu39VFD8Lhuk8l0V-cFE"
+                      "JC-zm7UihxiQMMUEmOFxe3x1ixkKZ0jqmqP3rKryx8tSbtcXyfea64Qh"
+                      "T6XNje2SoMP6FViBDxLHBQo2dwjRls0k5a-XSQSu2OTOiHLoaWsLe8pQ"
+                      "5FLNfTDqmkrawDEdZyxr3oSWJAsHQxRjcIiVzZuvwxYy1zl2STiP2vy_"
+                      "fTBaPemkleynQzqPg7oPCyXEE8bjnJbrfWkbNNN8438e6tHPIX4l7zTu"
+                      "zz98YPhLjt_d6EBdT4MldsYe-Y4KLyjaGHcAlTkk9oa5RhRwW89T0z_t"
+                      "1DSO3dvfKLUGXh8gd1BD6Fz5MfgpF5NjoafnQEqDjsAAhrCXY4b-Y3yY"
+                      "JEdX4_dp3dRGdHG_rWcPmgX4JG7lCnser4f8QGnDriqiAzJYEXeS8LzU"
+                      "ngg_0bx0lqv_KcyU5IaLISFO0xZSU5mmEPvdSoDnyAcV8pV44qhLtAvd"
+                      "29n0ehG259oRihtljTWeiu9V60a1N2tbZVl5mEqSK-6_xZvNYA1TCdzN"
+                      "ctvweH24unV7U3wer9XA9Q6kvJWDVJ4oKaQsKMrCSMlteBJMRxWbGK7d"
+                      "dUq6F7GdQw-3j2M-qdJvVKm9UPjY9rc1lPgol25-oJxTu7nxGlbJUH-4"
+                      "m5pevAN6NyZ6lfhbjWTKlxkrEKZvQXs_Yf6cpXEwpI_ZJeriq1UC1XHI"
+                      "pRkDwdOY9MH3an4RdDl2r9vGl_IwlKPNdh_5aF3jLgn7PCit1FNJAwC8"
+                      "fIncAXgAlgcXIpRXdfJk4bBiO89GGccSyDh2EgXYdpG3XvNgGWy7npuS"
+                      "oNTE7WIyblAk13UQuO4sdCbMIuriCdyfE73mvwj15xgb07RZRQtFGlFT"
+                      "mnFcIdZ90zDrWXDbANntv7KCKwNvoTuv64bY3HiGbj-NQ-U9eMylWVpv"
+                      "r4hrXcES8c9K3PqHWADZC0iIOvlzFv4VBoc_wVflcOrL_SIoaNFCNBAZ"
+                      "Zq-2v5lAgpJTqVOtqJ_HVraoSfcKy5g45p-qULunXj6Jwq21fobQiKub"
+                      "BKKOZwcJFyJD7F4ACKXOrz-HIvSHMCWW_9dVrRuCpJw0s0aVFbRqopDN"
+                      "hu446nqb4_EDYQM1tTHMozPd_jKxRRD0sH75X8ZoToxFSpLBDbtdWcen"
+                      "xj-zBf6IGWfZnmaetjKEBYJWC7QDQx1A91pJVJCEgieCkoIfTqkeQueP"
+                      "pIyu48g2FG3P1zjRF-kumhUTfSjo5qS0YiZQy0E1BMs6M11EvuxXRsHC"
+                      "lLHoy5nLYI2Sj4zjVjYyxSHyPRPGGo9hwB34yWxzYNtPPGiqXS_dNCpi"
+                      "_zRZwRY4lCGrQ-hYTEWIK1Dm5OlttvC4_eiQ1dv63NiGkLRJ5kJA3bIC"
+                      "N0fzCDY-MBqnd1cWn8YVBijVkgtaoascjL9EywDgJdeHnXK0eeOvUxHH"
+                      "hXJVkNqcibn8O4RQdpVU60TSA-uiu675ytIjcBHC6kTv8A8pmkj_4oyp"
+                      "Pd-F92YIJC741swkYQoeIHj8rE-ThcMUkF7KqC5VORbZTRp8HsZSqgiJ"
+                      "cIPaouuxd1-8Rxrid3fXkE6p8bkrysPYoxWEJgh7ZFsRCPDWX-yTeJwF"
+                      "N0PKFP1j0F6YtlLfK5wv-c4F8ZQHA_-yc_gODicy7KmWDZgbTP07e7gEWzw4MFRrndjbDQ"}],
               "thumbprints": ["cn-I_WNMClehiVp51i_0VpOENW1upEerA8sEam5hn-s",
-                              "NzbLsXh8uDCcd-6MNwXF4W_7noWXFZAfHkxZsRGC9Xs"]}
+                              "NzbLsXh8uDCcd-6MNwXF4W_7noWXFZAfHkxZsRGC9Xs",
+                              "T4xl70S7MT6Zeq6r9V9fPJGVn76wfnXJ21-gyo0Gu6o"]}
 
 # RFC 7517 - A.2
 PrivateKeys = {"keys": [
@@ -90,7 +126,14 @@ PrivateKeys = {"keys": [
                       "mHZGJ11rxyR8O55XLSe3SPmRfKwZI6yU24ZxvQKFYItdldUKGzO6Ia"
                       "6zTKhAVRU",
                 "alg": "RS256",
-                "kid": "2011-04-29"}]}
+                "kid": "2011-04-29"}, 
+            {
+                "kid": "T4xl70S7MT6Zeq6r9V9fPJGVn76wfnXJ21-gyo0Gu6o",
+                "kty": "AKP",
+                "alg": "ML-DSA-44",
+                "pub": "unH59k4RuutY-pxvu24U5h8YZD2rSVtHU5qRZsoBmBMcRPgmu9VuNOVdteXi1zNIXjnqJg_GAAxepLqA00Vc3lO0bzRIKu39VFD8Lhuk8l0V-cFEJC-zm7UihxiQMMUEmOFxe3x1ixkKZ0jqmqP3rKryx8tSbtcXyfea64QhT6XNje2SoMP6FViBDxLHBQo2dwjRls0k5a-XSQSu2OTOiHLoaWsLe8pQ5FLNfTDqmkrawDEdZyxr3oSWJAsHQxRjcIiVzZuvwxYy1zl2STiP2vy_fTBaPemkleynQzqPg7oPCyXEE8bjnJbrfWkbNNN8438e6tHPIX4l7zTuzz98YPhLjt_d6EBdT4MldsYe-Y4KLyjaGHcAlTkk9oa5RhRwW89T0z_t1DSO3dvfKLUGXh8gd1BD6Fz5MfgpF5NjoafnQEqDjsAAhrCXY4b-Y3yYJEdX4_dp3dRGdHG_rWcPmgX4JG7lCnser4f8QGnDriqiAzJYEXeS8LzUngg_0bx0lqv_KcyU5IaLISFO0xZSU5mmEPvdSoDnyAcV8pV44qhLtAvd29n0ehG259oRihtljTWeiu9V60a1N2tbZVl5mEqSK-6_xZvNYA1TCdzNctvweH24unV7U3wer9XA9Q6kvJWDVJ4oKaQsKMrCSMlteBJMRxWbGK7ddUq6F7GdQw-3j2M-qdJvVKm9UPjY9rc1lPgol25-oJxTu7nxGlbJUH-4m5pevAN6NyZ6lfhbjWTKlxkrEKZvQXs_Yf6cpXEwpI_ZJeriq1UC1XHIpRkDwdOY9MH3an4RdDl2r9vGl_IwlKPNdh_5aF3jLgn7PCit1FNJAwC8fIncAXgAlgcXIpRXdfJk4bBiO89GGccSyDh2EgXYdpG3XvNgGWy7npuSoNTE7WIyblAk13UQuO4sdCbMIuriCdyfE73mvwj15xgb07RZRQtFGlFTmnFcIdZ90zDrWXDbANntv7KCKwNvoTuv64bY3HiGbj-NQ-U9eMylWVpvr4hrXcES8c9K3PqHWADZC0iIOvlzFv4VBoc_wVflcOrL_SIoaNFCNBAZZq-2v5lAgpJTqVOtqJ_HVraoSfcKy5g45p-qULunXj6Jwq21fobQiKubBKKOZwcJFyJD7F4ACKXOrz-HIvSHMCWW_9dVrRuCpJw0s0aVFbRqopDNhu446nqb4_EDYQM1tTHMozPd_jKxRRD0sH75X8ZoToxFSpLBDbtdWcenxj-zBf6IGWfZnmaetjKEBYJWC7QDQx1A91pJVJCEgieCkoIfTqkeQuePpIyu48g2FG3P1zjRF-kumhUTfSjo5qS0YiZQy0E1BMs6M11EvuxXRsHClLHoy5nLYI2Sj4zjVjYyxSHyPRPGGo9hwB34yWxzYNtPPGiqXS_dNCpi_zRZwRY4lCGrQ-hYTEWIK1Dm5OlttvC4_eiQ1dv63NiGkLRJ5kJA3bICN0fzCDY-MBqnd1cWn8YVBijVkgtaoascjL9EywDgJdeHnXK0eeOvUxHHhXJVkNqcibn8O4RQdpVU60TSA-uiu675ytIjcBHC6kTv8A8pmkj_4oypPd-F92YIJC741swkYQoeIHj8rE-ThcMUkF7KqC5VORbZTRp8HsZSqgiJcIPaouuxd1-8Rxrid3fXkE6p8bkrysPYoxWEJgh7ZFsRCPDWX-yTeJwFN0PKFP1j0F6YtlLfK5wv-c4F8ZQHA_-yc_gODicy7KmWDZgbTP07e7gEWzw4MFRrndjbDQ",
+                "seed": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            }]}
 
 # RFC 7517 - A.3
 SymmetricKeys = {"keys": [
@@ -426,6 +469,7 @@ class TestJWK(unittest.TestCase):
         jwk.JWK.generate(kty='oct', size=256)
         jwk.JWK.generate(kty='RSA', size=4096)
         jwk.JWK.generate(kty='EC', curve='P-521')
+        jwk.JWK.generate(kty='AKP', alg='ML-DSA-44')
         k = jwk.JWK.generate(kty='oct', alg='A192KW', kid='MySymmetricKey')
         self.assertEqual(k['kid'], 'MySymmetricKey')
         self.assertEqual(len(base64url_decode(k.get_op_key('encrypt'))), 24)
@@ -480,6 +524,26 @@ class TestJWK(unittest.TestCase):
         key = jwk.JWK.generate(kty='EC', crv='BP-512')
         key.get_op_key('verify', 'BP-512')
 
+    def test_generate_AKP_key(self):
+        # Backwards compat curve
+        key = jwk.JWK.generate(kty='AKP', alg='ML-DSA-44')
+        key.get_op_key('verify')
+        # New param
+        key = jwk.JWK.generate(kty='AKP', alg='ML-DSA-65')
+        key.get_op_key('verify')
+        # New param prevails
+        key = jwk.JWK.generate(kty='AKP', alg='ML-DSA-87')
+        key.get_op_key('verify')
+        # New secp256k curve
+        # key = jwk.JWK.generate(kty='AKP', alg='Dilithium2')
+        # key.get_op_key('verify', 'Dilithium2')
+        # # Brainpool256R1 curve
+        # key = jwk.JWK.generate(kty='AKP', alg='Dilithium3')
+        # key.get_op_key('verify', 'Dilithium3')
+        # # Brainpool384R1 curve
+        # key = jwk.JWK.generate(kty='AKP', crv='Dilithium5')
+        # key.get_op_key('verify', 'Dilithium5')
+    
     def test_generate_OKP_keys(self):
         for crv in jwk.ImplementedOkpCurves:
             key = jwk.JWK.generate(kty='OKP', crv=crv)
@@ -543,7 +607,7 @@ class TestJWK(unittest.TestCase):
 
         ksm.add(k2)
         self.assertEqual({k1, k2}, ksm.get_keys('1'))
-        self.assertEqual(3, len(ksm['keys']))
+        self.assertEqual(4, len(ksm['keys']))
         # Expect that duplicate kids will
         # raise an exception when we use get_key
         with self.assertRaises(jwk.InvalidJWKValue):
@@ -871,6 +935,38 @@ A3_example = {'key': A3_key,
               'signature': bytes(bytearray(A3_signature))}
 
 
+
+# ML-DSA-44
+# A0_protected = \
+#     [123, 34, 97, 108, 103, 34, 58, 34, 69, 83, 50, 53, 54, 34, 125]
+A0_protected = [
+    123, 34, 97, 108, 103, 34, 58, 34, 77, 76, 45, 68, 83, 65,
+    45, 52, 52, 34, 125
+]
+A0_payload = \
+    [73, 116, 226, 128, 157, 115, 32, 97, 32, 100, 97, 110, 103, 101, 114, 111,
+     117, 115, 32, 98, 117, 115, 105, 110, 101, 115, 115, 44, 32, 70, 114, 111,
+     100, 111, 44, 32, 103, 111, 105, 110, 103, 32, 111, 117, 116, 32, 121, 111,
+     117, 114, 32, 100, 111, 111, 114, 46]
+A0_key = \
+    {
+        "kid": "T4xl70S7MT6Zeq6r9V9fPJGVn76wfnXJ21-gyo0Gu6o",
+        "kty": "AKP",
+        "alg": "ML-DSA-44",
+        "pub": "unH59k4RuutY-pxvu24U5h8YZD2rSVtHU5qRZsoBmBMcRPgmu9VuNOVdteXi1zNIXjnqJg_GAAxepLqA00Vc3lO0bzRIKu39VFD8Lhuk8l0V-cFEJC-zm7UihxiQMMUEmOFxe3x1ixkKZ0jqmqP3rKryx8tSbtcXyfea64QhT6XNje2SoMP6FViBDxLHBQo2dwjRls0k5a-XSQSu2OTOiHLoaWsLe8pQ5FLNfTDqmkrawDEdZyxr3oSWJAsHQxRjcIiVzZuvwxYy1zl2STiP2vy_fTBaPemkleynQzqPg7oPCyXEE8bjnJbrfWkbNNN8438e6tHPIX4l7zTuzz98YPhLjt_d6EBdT4MldsYe-Y4KLyjaGHcAlTkk9oa5RhRwW89T0z_t1DSO3dvfKLUGXh8gd1BD6Fz5MfgpF5NjoafnQEqDjsAAhrCXY4b-Y3yYJEdX4_dp3dRGdHG_rWcPmgX4JG7lCnser4f8QGnDriqiAzJYEXeS8LzUngg_0bx0lqv_KcyU5IaLISFO0xZSU5mmEPvdSoDnyAcV8pV44qhLtAvd29n0ehG259oRihtljTWeiu9V60a1N2tbZVl5mEqSK-6_xZvNYA1TCdzNctvweH24unV7U3wer9XA9Q6kvJWDVJ4oKaQsKMrCSMlteBJMRxWbGK7ddUq6F7GdQw-3j2M-qdJvVKm9UPjY9rc1lPgol25-oJxTu7nxGlbJUH-4m5pevAN6NyZ6lfhbjWTKlxkrEKZvQXs_Yf6cpXEwpI_ZJeriq1UC1XHIpRkDwdOY9MH3an4RdDl2r9vGl_IwlKPNdh_5aF3jLgn7PCit1FNJAwC8fIncAXgAlgcXIpRXdfJk4bBiO89GGccSyDh2EgXYdpG3XvNgGWy7npuSoNTE7WIyblAk13UQuO4sdCbMIuriCdyfE73mvwj15xgb07RZRQtFGlFTmnFcIdZ90zDrWXDbANntv7KCKwNvoTuv64bY3HiGbj-NQ-U9eMylWVpvr4hrXcES8c9K3PqHWADZC0iIOvlzFv4VBoc_wVflcOrL_SIoaNFCNBAZZq-2v5lAgpJTqVOtqJ_HVraoSfcKy5g45p-qULunXj6Jwq21fobQiKubBKKOZwcJFyJD7F4ACKXOrz-HIvSHMCWW_9dVrRuCpJw0s0aVFbRqopDNhu446nqb4_EDYQM1tTHMozPd_jKxRRD0sH75X8ZoToxFSpLBDbtdWcenxj-zBf6IGWfZnmaetjKEBYJWC7QDQx1A91pJVJCEgieCkoIfTqkeQuePpIyu48g2FG3P1zjRF-kumhUTfSjo5qS0YiZQy0E1BMs6M11EvuxXRsHClLHoy5nLYI2Sj4zjVjYyxSHyPRPGGo9hwB34yWxzYNtPPGiqXS_dNCpi_zRZwRY4lCGrQ-hYTEWIK1Dm5OlttvC4_eiQ1dv63NiGkLRJ5kJA3bICN0fzCDY-MBqnd1cWn8YVBijVkgtaoascjL9EywDgJdeHnXK0eeOvUxHHhXJVkNqcibn8O4RQdpVU60TSA-uiu675ytIjcBHC6kTv8A8pmkj_4oypPd-F92YIJC741swkYQoeIHj8rE-ThcMUkF7KqC5VORbZTRp8HsZSqgiJcIPaouuxd1-8Rxrid3fXkE6p8bkrysPYoxWEJgh7ZFsRCPDWX-yTeJwFN0PKFP1j0F6YtlLfK5wv-c4F8ZQHA_-yc_gODicy7KmWDZgbTP07e7gEWzw4MFRrndjbDQ",
+        "seed": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+A0_signature = "92723543ff422332c7e57cbde0a91ced654aa9970082d27798d7f41948f5b8b03a6170161497d7921fb343152d125dd4202ef33c2894c0a4c347a66cb949858fc0ad6ffe9a1fae2112537bc1e4bfd66e68902cbc1aa1cd2f696c7dc9421f76367f840d3fe0cb552d57b2e6e80c0ec3c378abd887582887d6272214ed138781ddb89eeba7d7325bc5c2c90b610ab7633c474c19b9d70813d9e6e683f3617ab4cfe84fb0aa17a7d95e55892a80c98ef4ba3c48fff5618204b61dc1f2ff86b8fdb8f4a0d315128f8c84a62b868f0a49e3b638a11ec415bf65de3d7c4a1316ad1e5e2a86c8a25becbe1095dad4a7f0e166292c0ec1e3fe4876cfbe708266231edfeb1c4058a879aa8056ab540839a685bb3b00ada456dcd384bb34e17b0d449fce6023719c453646a7e5431b2c479b4025d387325a8d9bc4054e1747db0dcdbae623f6982370e90835d232097808460783803187015162401b497530dd54fe4a049868797572a7413465e3ad5e6bf0aadc32e4700d838f6c285941720d3990f283bfca178049f25a732466effb2e8fcf33e5714da3c179dcff0ec531bdc543e5af0bc7f9302aec01f7354e12357029c95293537ce1c75b49df89e54c82dc4ee8d7549568fdfd0365f531afa252098aafcb8cf52a5d300d0cdde796a8a7216d431bce3e17021db00ddf8836520ef9d099bcdf97e5ecd3b172aa0c6ee4dc807ebc92bdfb33e3dd8762bd59acd7509802ba981d2165bc5a37ce8e64e2179f42ad5b5f56d2b6a83cc5e343843427eab4d3d09597b970de69d0ff1aae3e14481f0708f87b35da90040796af0d30b1885d88cdfd96b4a403c98b458321667a8a1824cf0ab1d70dd12344a61135aa88513e3895a625e5cdbb2b4bfea338ca3eeeadcc48646120b85d9dcb7a1105b66033384d261db84a3205ea8e83c98ceac620f89b5f78f02bcfd0e5198c397b57a3c477bd77c1694750a0b79ecb2c0d604d2721cb25e33e5af3fbadc0416255fd152b6a5dbe2ca238f5528b7cce3009aacfa805855cbc68c310396640100b93c83c3b6561ba762c29b66ae0497668b56eb7235f52d991fb91e097448abfa452ee6213ae1ba743e0c928b882d1742f5b5d930bacd0eaec23a950e3bce9a415958774a51f77e56a54c3e57aa1b4919c79511594a6512201ee1d50d0899c891ce88cdf775e1c3baa9cc6cddcc310edce3936b25da486ff4607432cbe787e2105b9a0b7f2c1c75db4835798e171de1c545f4df7ad1e42f9659bac5f58d0fe793d7b3e17046ffa851b53352b9506c6251fcf8a52e479faa4cff1d92f45ff16936847a14af6b33e583bfc4314230c4ebb7c6a188cc9f8e8e62879170a37ae215b15418a89b9e24cb5eca45778b2970d2bf59c86564b46090f2b88e1e99fd7f092641f1bd0869ca8b87405c86c6006b976e31fbf101d736d632126d8669bc0e22adfa7cca689cfc0a3bb5f87c02a60efa091a91b04cf6872284a5b6f83392904a3dc0b04342ae8566439408bf72b65cd464bdee2f8c198feac5766fa19263f51e46f3c4940ed25200464ca6e7f9cd1a62106e07ca653e145305ae79fdc16a0263666af175f9f74c92d26e21a1f67fe2b4cd90b36c7c39e3df7c4fb9085a0c8cb3218202fca7101fe484eab04fbb428e0e4743c4888dd9d1616d248d97e3b792c96c603e3e7468f203d541519e6033f6bec49784d258f78022b4a098d6cadc4acb980eb84d04aae7a09d6e12c30f547b20170fd91ccc8011a550ba0852356e1f9bcabaff536fe332eeb43213ce600be9aea2ebe592e90448b3fe1552dc2be5c5d72050c378755678670d8af43a5bdbab1143f872b82e8aaef3fc34e261a19f524b2e6fe4fb9b0d3353c668392779a544e924bbfe218214025e82b1c1efba79d12c42aaa56d526b575c159b3954fe007d1de683bc17e1596ad401e7a45c44d8bd4b6622a84dcf630c43af4c3931afcea0324c0c9ba45dc8f17fab8f00549d5bafc429f3cfb807ce17e76cd9e5cc3e20961ef87895276f4ba5e626df8d3fad68afa72f940798bd4ca94caf17fde32d689336533db3f7fefd7f5d7d2713b4532f3f7c100f7a7ae27b9771296c4aa4b3b9a1ea2d4524d9efbe533fbb6f6c6286c9e8f513fa2d559509c5fc904044a133ef8a415e6d65e58e4ba35e6bb0895a4078a750108ef1f1c21c8e7d2c07cabac378266a1d0ea2d8c245a28c42ffb1fac2e8bb6b6d7aa9335a70d3dcd2aecfed4b5450f8b9d61ee3eb53928b0b3bf9dc92ab87c954fdc741a307bf17e21bfd48b86d0d85304fb49a7c86d178a31d4b2b18c67d75fa30bc892bf37269ab09453990303264863cd3c4251c3d903b218e8b677540794b55027effd4e08a159fb5a0bf17824be041c6ac967e1ed84dd7fbdc49e61b0558c558e55da1c279e4d999469c9d3e0c41401c6c58d3aba04195ba0040658fd85656a5de87367aeebfbe3855e5a67e02e4f73e79ebbc05870b97324984db1bc3a38c0ff34c6eb6351fb1e3f1e5890bc616355ec5aa4d9af5f6d227c49596abc44b66c58f9adab9c19e6e70131ab022e938005e9d865d4807103610bbdf02d2d19dacd47421068225ee5af5a77ef62d9b3f49ebb5bbff05a3b0e826a46929a368736fc950c9a7ed35194bcccbcb3c607aaf11f2235b44fdb40f00c1357a1cb130c129a42bb41f908843f2490b496b81bad5778d672879686cdfa1667d3a68d91bda5b6de85cab022bb7e1128cfc9e4fab1f4abbce7d366bedf057c2952cdab4b806b94db1ee60fe1f024228a4f1a68e4ce10f9178b2838b390dec119600d91d2fb783e6173d420134eeb6fc7c649e4329909bca5beb64bc36e0b71bf2e271bcd2e97a5bf29e46ca042834d160d2995b15e36484cd6b487a6a09f034224a11b160dd086b7b7f787348bad267cff582202935eb097dd8b76797fba98fcd898b6d26d5e631faf6fe9666a615d96023fbd0d4d1d891e2139f6106899c16614ed29bf9242c62216e375043277bfd78cf4af21abdd4d05d08755af93864f43a2ff8991c4d99d91914725b9c971d457834e125b415e1f069238c3bece58a37bbedab3c25e32b56863d22355bc05a5092d0639b1b7c054202e50706ff95961e506a6b7e96078a82e86a4d2bb2fad8da6ce6f992204e1bbc4642ddf3f97617b675850c28a2fb9875d577d9b10fb1431cbc8127dd333e210caf4dc3f550b7a7f35a2418d1387f747cd5922d0c51f55fb0352381b9610fa8f4c206ecdf3763f86337aedb7ca22b74c17c75d5b20e68e2a07f4eed3f4c229955cc46a4567bb2c25002931393e444a535c7f8788aeb2bce2e6ec0a0e17384a64709ba2acb0dae608092234364244454a777c8c9eb8c0e0f0060f374a595a6570727a8ca9abb1bac4ced1ddf5000000000000000000000000121f3044"
+  
+A0_example = {'key': A0_key,
+              'alg': 'ML-DSA-44',
+              'protected': bytes(bytearray(A0_protected)).decode('utf-8'),
+              'payload': bytes(bytearray(A0_payload)),
+              'signature': bytes.fromhex(A0_signature)}
+
+
+
+
+
 # RFC 7515 - A.4
 A4_protected = \
     [123, 34, 97, 108, 103, 34, 58, 34, 69, 83, 53, 49, 50, 34, 125]
@@ -997,7 +1093,11 @@ class TestJWS(unittest.TestCase):
         # ECDSA signatures are always different every time
         # they are generated unlike RSA or symmetric ones
         if test['key']['kty'] != 'EC':
-            self.assertEqual(decsig, test['signature'])
+            if test['key']['kty'] == 'AKP':
+                print("KOSTIA + ASIA: ", type(test['signature']))
+                s.verify(test['signature'])
+            else:
+                self.assertEqual(decsig, test['signature'])
         else:
             # Check we can verify the test signature independently
             # this is so that we can test the ECDSA against a known
@@ -1012,6 +1112,9 @@ class TestJWS(unittest.TestCase):
 
     def test_A3(self):
         self.check_sign(A3_example)
+
+    def test_A0(self):
+        self.check_sign(A0_example)
 
     def test_A4(self):
         self.check_sign(A4_example)

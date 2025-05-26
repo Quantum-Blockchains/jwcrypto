@@ -26,6 +26,8 @@ from jwcrypto.common import base64url_decode, base64url_encode
 from jwcrypto.common import json_decode
 from jwcrypto.jwk import JWK
 
+import dilithium_py
+
 # Implements RFC 7518 - JSON Web Algorithms (JWA)
 
 default_max_pbkdf2_iterations = 16384
@@ -160,6 +162,45 @@ class _RawEC(_RawJWS):
         enc_signature = ec_utils.encode_dss_signature(
             int(hexlify(r), 16), int(hexlify(s), 16))
         pkey.verify(enc_signature, payload, ec.ECDSA(self.hashfn))
+
+
+class _RawAKP(_RawJWS):
+    def __init__(self, algname):
+        self.algname = algname
+
+    def sign(self, key, payload):
+        skey = key.get_op_key('sign')
+        if self.algname == 'Dilithium2':
+            return dilithium_py.dilithium.Dilithium2.sign(skey, payload)
+        elif self.algname == 'Dilithium3':
+            return dilithium_py.dilithium.Dilithium3.sign(skey, payload)
+        elif self.algname == 'Dilithium5':
+            return dilithium_py.dilithium.Dilithium5.sign(skey, payload)
+        elif self.algname == 'ML-DSA-44':
+            return dilithium_py.ml_dsa.ML_DSA_44.sign(skey, payload)
+        elif self.algname == 'ML-DSA-65':
+            return dilithium_py.ml_dsa.ML_DSA_65.sign(skey, payload)
+        elif self.algname == 'ML-DSA-87':
+            return dilithium_py.ml_dsa.ML_DSA_87.sign(skey, payload)
+        else:
+            raise InvalidJWAAlgorithm(f"Unsupported AKP algorithm {self.algname}")
+
+    def verify(self, key, payload, signature):
+        pub = key.get_op_key('verify')
+        if self.algname == 'Dilithium2':
+            return dilithium_py.dilithium.Dilithium2.verify(pub, payload, signature, )
+        elif self.algname == 'Dilithium3':
+            return dilithium_py.dilithium.Dilithium3.verify(pub, payload, signature)
+        elif self.algname == 'Dilithium5':
+            return dilithium_py.dilithium.Dilithium5.verify(pub, payload, signature)
+        elif self.algname == 'ML-DSA-44':
+            return dilithium_py.ml_dsa.ML_DSA_44.verify(pub, payload, signature)
+        elif self.algname == 'ML-DSA-65':
+            return dilithium_py.ml_dsa.ML_DSA_65.verify(pub, payload, signature)
+        elif self.algname == 'ML-DSA-87':
+            return dilithium_py.ml_dsa.ML_DSA_87.verify(pub, payload, signature)
+        else:
+            raise InvalidJWAAlgorithm(f"Unsupported AKP algorithm {self.algname}")
 
 
 class _RawNone(_RawJWS):
@@ -332,6 +373,72 @@ class _PS512(_RawRSA, JWAAlgorithm):
         padfn = padding.PSS(padding.MGF1(hashes.SHA512()),
                             hashes.SHA512.digest_size)
         super(_PS512, self).__init__(padfn, hashes.SHA512())
+
+
+class _Dilithium2(_RawAKP, JWAAlgorithm):
+    name = 'Dilithium2'
+    description = "CRYSTALS-Dilithium Level 2"
+    keysize = 2528
+    algorithm_usage_location = 'alg'
+    algorithm_use = 'sig'
+
+    def __init__(self):
+        super().__init__('Dilithium2')
+
+
+class _Dilithium3(_RawAKP, JWAAlgorithm):
+    name = 'Dilithium3'
+    description = "CRYSTALS-Dilithium Level 3"
+    keysize = 4000
+    algorithm_usage_location = 'alg'
+    algorithm_use = 'sig'
+
+    def __init__(self):
+        super().__init__('Dilithium3')
+
+
+class _Dilithium5(_RawAKP, JWAAlgorithm):
+    name = 'Dilithium5'
+    description = "CRYSTALS-Dilithium Level 5"
+    keysize = 4864
+    algorithm_usage_location = 'alg'
+    algorithm_use = 'sig'
+
+    def __init__(self):
+        super().__init__('Dilithium5')
+
+
+class _MLDSA44(_RawAKP, JWAAlgorithm):
+    name = 'ML-DSA-44'
+    description = "ML-DSA Level 44"
+    keysize = 2560
+    algorithm_usage_location = 'alg'
+    algorithm_use = 'sig'
+
+    def __init__(self):
+        super().__init__('ML-DSA-44')
+
+
+class _MLDSA65(_RawAKP, JWAAlgorithm):
+    name = 'ML-DSA-65'
+    description = "ML-DSA Level 65"
+    keysize = 4032
+    algorithm_usage_location = 'alg'
+    algorithm_use = 'sig'
+
+    def __init__(self):
+        super().__init__('ML-DSA-65')
+
+
+class _MLDSA87(_RawAKP, JWAAlgorithm):
+    name = 'ML-DSA-87'
+    description = "ML-DSA Level 87"
+    keysize = 4896
+    algorithm_usage_location = 'alg'
+    algorithm_use = 'sig'
+
+    def __init__(self):
+        super().__init__('ML-DSA-87')
 
 
 class _None(_RawNone, JWAAlgorithm):
@@ -1140,6 +1247,12 @@ class JWA:
         'PS256': _PS256,
         'PS384': _PS384,
         'PS512': _PS512,
+        'Dilithium2': _Dilithium2,
+        'Dilithium3': _Dilithium3,
+        'Dilithium5': _Dilithium5,
+        'ML-DSA-44': _MLDSA44,
+        'ML-DSA-65': _MLDSA65,
+        'ML-DSA-87': _MLDSA87,
         'none': _None,
         'RSA1_5': _Rsa15,
         'RSA-OAEP': _RsaOaep,
