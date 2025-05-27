@@ -38,6 +38,7 @@ setup(
     install_requires = [
         'cryptography >= 3.4',
         'typing_extensions >= 4.5.0',
+        'dilithium-py >= 1.1.0'
     ],
     python_requires = '>= 3.8',
 )
